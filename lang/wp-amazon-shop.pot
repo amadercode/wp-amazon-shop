@@ -1,0 +1,13 @@
+# Copyright (C) 2014 WP Amazon Shop
+# This file is distributed under the same license as the WP Amazon Shop package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Amazon Shop 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/wp-amazon-shop\n"
+"POT-Creation-Date: 2014-04-07 11:28:06+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: AmaderCode Lab <amadercode@gmail.com>\n"
+"Language-Team: ACL Translator <amadercode@gmail.com>\n"
