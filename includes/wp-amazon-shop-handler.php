@@ -200,8 +200,10 @@ class ACL_Amazon_Product_Handler
     private function products_display($products)
     {
         $affiliate_tag=get_option('acl_wpas_amazon_associate_tag');
+        $template=get_option('acl_wpas_templates');
         ob_start();
         foreach ($products as $product) {
+            if($template==1){ //Template one start
             ?>
             <div class="wpas-product-item">
                 <div class="amazon-product-box">
@@ -242,6 +244,49 @@ class ACL_Amazon_Product_Handler
                 <!-- amazon-product-box -->
             </div>
             <?php
+            }
+            if($template==2){  //Template two start
+                ?>
+                <div class="wpas-product-item">
+                    <div class="amazon-product-box">
+
+                        <div class="amazon-product-thumb">
+                            <?php if(isset($product['IsPrimeEligible']) && $product['IsPrimeEligible']=='1'){?>
+                            <span class="amazon-product-prime"></span>
+                            <?php } ?>
+                            <img src="<?php echo $product['ImageUrl']; ?>" alt="Product">
+                        </div>
+                        <!-- amazon-product-thumb            -->
+                        <div class="amazon-product-info">
+                            <h3 title="<?php echo str_replace("\'", "", $product['Title']); ?>"><?php echo str_replace("\'", "", $product['Title']); ?> </h3>
+                                <p><?php _e('Price', 'wp-amazon-shop') ?> : <?php echo $product['Price']; ?> </p>
+                        </div>
+                        <!-- amazon-product-info -->
+                        <div class="amazon-product-action">
+                            <button class="wpas-add-to-cart" type="button"
+                                    wpas-sku="<?php echo $product['ASIN']; ?>"
+                                    wpas-url="<?php echo $this->build_action_url($product['ASIN'],$product['DetailPageURL']); ?>"
+                            > <?php echo (get_option('acl_wpas_buy_now_label')? get_option('acl_wpas_buy_now_label') : "Buy Now");  ?>  </button>
+                        </div>
+                        <?php if(isset($product['Rating']) && $product['Rating']!=""){
+                            if( strpos( $product['Rating'], '.0' ) !== false) {
+                                $formatted_rating=str_replace(".0","",$product['Rating']);
+                            }else{
+                                $formatted_rating=str_replace(".","-",$product['Rating']);
+                            }
+
+                            $rating_class="a-star-".$formatted_rating;
+                            ?>
+                        <div class="amazon-product-rating" data-product-asin="<?php echo $product['ASIN']; ?>">
+                                <i class="a-icon a-icon-star <?php echo $rating_class?>"><span class="a-icon-alt"><?php echo $product['Rating']; ?> out of 5 stars</span></i>
+                                <p>( <a href="<?php echo $product['DetailPageURL']; ?>?tag=<?php echo $affiliate_tag;  ?>#dp-summary-see-all-reviews" target="_blank"><?php echo $product['TotalReviews'] ;?></a>)</p>
+                        </div>
+                        <?php } ?>
+                    </div>
+                    <!-- amazon-product-box -->
+                </div>
+                <?php
+            }
         }
         $content = ob_get_clean();
         return $content;
