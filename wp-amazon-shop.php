@@ -32,7 +32,7 @@ if ( ! defined( 'ACL_WPAS_URL' ) ) {
 if(!function_exists('wpas_clean')){
     function wpas_clean($var){
         if ( is_array( $var ) ) {
-            return array_map( 'wpas_clean', $var );
+            return array_map( 'wpas_clean', $var ); 
         } else {
             return is_scalar( $var ) ? sanitize_text_field( $var ) : $var;
         }
