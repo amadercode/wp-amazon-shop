@@ -3,9 +3,9 @@ Contributors: amadercode
 Donate link: https://www.amadercode.com
 Tags: amazon, amazon shop,affiliate,amazon affiliate, dropship, amazon dropship,amazon product search, amazon product import,amazon product auto link
 Requires at least: 4.4
-Tested up to: 5.7.2
+Tested up to: 6.0.1
 WC requires at least: 3.0
-WC tested up to: 5.4.1
+WC tested up to: 6.7.0
 Stable tag: 2.1.1
 Requires PHP: 5.6.0
 License: GPLv2 or later

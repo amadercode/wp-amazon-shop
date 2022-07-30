@@ -78,9 +78,9 @@ class ACL_Amazon_Shop_Info_Page
                             <p>[wpas_products]</p>
                             <p><?php _e('Just copy and paste this shortcode where you want to display amazon product by Amazon Product ASIN or Keywords parameter','wp-amazon-shop');?> .</p>
                             <p><?php _e('Example of Multiple ASINs','wp-amazon-shop');?>  : [wpas_products ASIN="B077SXWSRP,B07CT3W44K"]</p>
-                            <p><?php _e('Example of single ASIN','wp-amazon-shop');?>  : [wpas_products ASIN=B077SXWSRP]</p>
-                            <p><?php _e('Example of Keywords','wp-amazon-shop');?>  : [wpas_products keywords="Kids & Baby Fashion"]</p>
-                            <p><?php _e('Example of Product Comparison Table','wp-amazon-shop');?>  : [wpas_products_comparison ASIN=”B077SXWSRP,B07CT3W44K”]</p>
+                            <p><?php _e('Example of Single ASIN','wp-amazon-shop');?>  : [wpas_products ASIN="B077SXWSRP"]</p>
+                            <p><?php _e('Example of Keywords','wp-amazon-shop');?>  : [wpas_products keywords="Alexa"]</p>
+                            <p><?php _e('Example of Product Comparison Table','wp-amazon-shop');?>  : [wpas_products_comparison ASIN="B077SXWSRP,B07CT3W44K"]</p>
 
                             <h3><?php _e('WP AMAZON SHOP PRO VERSION FEATURES','wp-amazon-shop');?> ( <?php _e('Included Free Version Features','wp-amazon-shop');?>  ) </h3>
                             <ol style="list-style:disc">

@@ -8,6 +8,8 @@ if (!function_exists('wpas_search_form')) {
     add_shortcode('wpas_search', 'wpas_search_form');
     function wpas_search_form()
     {
+
+        $template=get_option('acl_wpas_templates');
         ob_start();
 		?>
         <div class="wp-amazon-shop-shortcode-wrapper">
@@ -19,7 +21,7 @@ if (!function_exists('wpas_search_form')) {
                 <button type="button" id="wpas-search-btn"
                         class="wpas-search-btn"><?php _e('Search', 'wp-amazon-shop') ?></button>
             </div>
-            <div class="wpas-products-wrapper"></div>
+            <div class="wpas-products-wrapper" <?php echo "template-".$template?>"></div>
             <div class="wpas-load-more-wrapper" style="display: none">
                 <button id="wpas-load-more-btn" class="wpas-load-more-btn" data-keyword="" data-page-num=""><?php _e('Load More', 'wp-amazon-shop') ?> <span id="wpas-load-more-loader"></span></button>
             </div>
@@ -51,9 +53,11 @@ if (!function_exists('wpas_product_shortcode')) {
             $key='echo dots';
             $type='keyword';
         }
+        $template=get_option('acl_wpas_templates');
        ob_start();
+       
         ?>
-        <div class="wp-amazon-shop-auto-link-shortcode-wrapper">
+        <div class="wp-amazon-shop-auto-link-shortcode-wrapper <?php echo "template-".$template?>">
             <div class="row wpas-products-wrapper">
                 <div class="wp-amazon-shop-products" shortcode-type="<?php echo $type; ?>" asin-keys="<?php echo $key; ?>">
                     <img style="margin:0 auto;text-align: center" src="<?php echo ACL_WPAS_IMG_PATH; ?>dummy_product.png" alt="<?php _e('Pre Products','wp-amazon-shop')?>">

@@ -1,16 +1,16 @@
 <?php
 /*
  * Plugin Name: Dropshipping & Affiliation with Amazon
- * Version: 2.1.1
+ * Version: 2.1.2
  * Plugin URI: https://www.wpamazonshop.com/
  * Description: Search and build products from Amazon store to make easy money by affiliation & dropshipping. No hassle, no coding, no amazon aws keys!.
  * Author: AmaderCode Lab
  * Author URI: http://www.amadercode.com/
  * Requires at least: 4.4
- * Tested up to: 5.7.2
+ * Tested up to: 6.0.1
  * WC requires at least: 3.0
- * WC tested up to: 5.4.1
- * Stable tag: 2.1.1
+ * WC tested up to: 6.7.0 
+ * Stable tag: 2.1.2
  * Text Domain: wp-amazon-shop
  * Domain Path: /lang/
  * @package WordPress

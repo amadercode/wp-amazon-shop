@@ -98,7 +98,7 @@ class ACL_Amazon_product_Admin_API {
 				$html .= '<textarea id="' . esc_attr( $field['id'] ) . '" rows="5" cols="50" name="' . esc_attr( $option_name ) . '" placeholder="' . esc_attr( $field['placeholder'] ) . '">' . $data . '</textarea><br/>'. "\n";
 			break;
 			case 'template':
-                $html .= '<div class="rewp-admin-template-wrapper">';
+                $html .= '<div class="wpas-admin-template-wrapper">';
                 foreach ( $field['options'] as $k => $v ) {
                     $checked = false;
                     if ( $k == $data ) {

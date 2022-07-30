@@ -1002,4 +1002,24 @@ ul.product-log-message li.log-message-fail {
     transform: rotate(0deg) !important;
 }
 
+.wpas-admin-template-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wpas-admin-template-wrapper label {
+    display: block;
+    flex: 0 0 25%;
+    max-width: 25%;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #e4e2e2;
+    border: 1px solid #f1f1f1;
+}
+
+.wpas-admin-template-wrapper label img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
 
