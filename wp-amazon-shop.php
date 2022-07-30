@@ -25,6 +25,9 @@ if ( ! defined( 'ACL_WPAS_PLUGIN_FILE' ) ) {
     define( 'ACL_WPAS_PLUGIN_FILE', __FILE__ );
 }
 define('ACL_WPAS_IMG_PATH', plugin_dir_url(__FILE__).'assets/images/');
+if ( ! defined( 'ACL_WPAS_URL' ) ) {
+    define('ACL_WPAS_URL', plugin_dir_url(__FILE__));
+}
 //Dependency functions.
 if(!function_exists('wpas_clean')){
     function wpas_clean($var){

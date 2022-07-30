@@ -97,7 +97,26 @@ class ACL_Amazon_product_Admin_API {
 			case 'textarea':
 				$html .= '<textarea id="' . esc_attr( $field['id'] ) . '" rows="5" cols="50" name="' . esc_attr( $option_name ) . '" placeholder="' . esc_attr( $field['placeholder'] ) . '">' . $data . '</textarea><br/>'. "\n";
 			break;
-
+			case 'template':
+                $html .= '<div class="rewp-admin-template-wrapper">';
+                foreach ( $field['options'] as $k => $v ) {
+                    $checked = false;
+                    if ( $k == $data ) {
+                        $checked = true;
+                    }
+                    if($k=='1'||$k=='2'){
+                        $temp_plugin_base=ACL_WPAS_URL;
+                    }else{
+                        $temp_plugin_base=ACL_WPAS_URL;
+                    }
+                    if($k!=""){
+                        $html .= '<label for="' . esc_attr( $field['id'] . '_' . $k ) . '">';
+                        $html .= '<img src="'.$temp_plugin_base.'assets/images/template'.$k.'.jpg" alt="'.$v.'">';
+                        $html .= '<input type="radio" ' . checked( $checked, true, false ) . ' name="' . esc_attr( $option_name ) . '" value="' . esc_attr( $k ) . '" id="' . esc_attr( $field['id'] . '_' . $k ) . '" /><span>'.$v.'</span> </label> ';
+                    }
+                }
+                $html .= '</div>';
+			break;
 			case 'checkbox':
 				$checked = '';
 				if ( $data && 'on' == $data ) {

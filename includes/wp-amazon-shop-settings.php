@@ -341,6 +341,21 @@ class ACL_Amazon_Product_Settings {
             'description'			=> __( 'Manage imported products by updating & deleting products', 'wp-amazon-shop' ),
             'fields'				=> array(),
         );
+		$settings['wpas_template'] = array(
+            'title'					=> __( 'Templates', 'wp-amazon-shop' ),
+            'description'			=> __( 'Select a template to display cart on your WooCommerce store as default', 'wp-amazon-shop' ),
+            'fields'				=> array(
+                array(
+                    'id' 			=> 'templates',
+                    'label'			=> __( 'Cart Templates', 'wp-amazon-shop' ),
+                    'description'	=> __( '', 'wp-amazon-shop' ),
+                    'type'			=> 'template',
+                    'options'		=> array( '1' => 'Template 01', '2' => 'Template 02',),
+                    'default'		=> '1'
+                ),
+
+            ),
+        );
 		$settings['wpas_custom_style'] = array(
             'title'					=> __( 'Custom Style', 'wp-amazon-shop' ),
             'description'			=> __( 'Design your store by overriding default with your own style (CSS).', 'wp-amazon-shop' ),
