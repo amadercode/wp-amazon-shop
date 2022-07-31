@@ -228,9 +228,9 @@ class ACL_Amazon_Product_Handler
                     </div>
                     <?php if(isset($product['Rating']) && $product['Rating']!=""){
                         if( strpos( $product['Rating'], '.0' ) !== false) {
-                            $formatted_rating=str_replace(".0","",$product['Rating']);
+                            $formatted_rating=str_replace(".0","",ceil($product['Rating']));
                         }else{
-                            $formatted_rating=str_replace(".","-",$product['Rating']);
+                            $formatted_rating=str_replace(".","-",ceil($product['Rating']));
                         }
 
                         $rating_class="a-star-".$formatted_rating;
